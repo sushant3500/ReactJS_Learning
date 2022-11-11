@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+   <form name="firstForm" action="javascript:void" onsubmit=" return validateForm()" method="post">
+      Name: <input type="text" id="check-input" name="check-input" onfocus="focusFunction()" onblur="blurFunction()">
+      password: <input type="password" id="pass" name="pass" onfocus="focusFun()" onblur="blurFun()">
+      <input type="submit" value="Submit">
+   </form>
+
+   <script>
+      function validateForm() {
+
+         let x = document.forms["firstForm"]["check-input"].value;
+         let y = document.forms["firstForm"]["pass"].value;
+         let x1 = document.getElementById("check-input").value;
+         let y1 = document.getElementsById("pass").value;
+         if (x == "") {
+            alert("Name must be filled out");
+            return false;
+         }
+         else if (y.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+         }
+      };
+
+      // Focus = Changes the background color of input to amethyst color;
+
+      function focusFunction() {
+         document.getElementById("check-input").style.background = "#9b59b6";
+         
+      };
+
+      // No focus = Changes the background color of input to sun flower color
+      function blurFunction() {
+         document.getElementById("pass").style.background = "#f1c40f";
+      };
+
+      function focusFun(){
+         document.getElementById("pass").style.background = "#9b59b6";
+      }
+
+      function blurFun(){
+         document.getElementById("check-input").style.background = "#f1c40f";
+      }
+   </script>
+
+</body>
+
+</html>

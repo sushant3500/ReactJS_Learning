@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>REACT Virtual DOM</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <h2> About Me</h2>
+    <ul>
+        <li>Your Name:</li>
+        <li>Qualification</li>
+        <li>Native Place</li>
+    </ul>
+    <button id="button"> Try it</button>
+
+    </body>
+    <script type="text/babel">
+    let element = document.getElementById("button");
+    element.addEventListener("click", myFunction);
+    element.style.color= "green";
+    function myFunction(){
+        const values = document.getElementsByTagName("li");
+        values[0].innerHTML = "Sushant Sawant";
+        values[1].innerHTML = "B.E. (Mechanical & Automation)";
+        values[2].innerHTML = "Sangli";
+        reactDOM.render(values, document.getElementById (`root`));
+    }
+    setInterval(tick, 5000);
+  
+</script>
+</body>
+</html>

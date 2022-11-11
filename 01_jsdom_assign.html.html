@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Javascript DOM </title>
+</head>
+<body>
+    <h2> The addEventListener() Method </h2>
+    <button id="myBtn"> Try it</button>
+    <br>
+    <span id="A"> </span>
+    <script>
+
+        let button = document.getElementById('myBtn');
+        button.addEventListener("click", myFunction);
+        function myFunction() {
+            document.getElementById("A").innerHTML = "Sushant Sawant";
+            document.getElementById("A").style.color = "red";
+            //document.getElementById("A").style.backgroundColor = "blue";
+        }
+        button.addEventListener("dblclick", myFun);
+        function myFun() {
+            document.getElementsByTagName("span")[0].style.fontSize = "60px";
+            document.getElementsByTagName("span")[0].style.color = "grey";
+            document.getElementsByTagName("span")[0].style.backgroundColor = "white";
+
+        };
+    </script>
+</body>
+</html>
